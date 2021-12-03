@@ -1,4 +1,4 @@
-module github.com/K-Phoen/grabana
+module github.com/dskatz/grabana
 
 go 1.16
 
