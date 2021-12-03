@@ -23,6 +23,7 @@ type DashboardGraph struct {
 	Axes          *GraphAxes          `yaml:",omitempty"`
 	Legend        []string            `yaml:",omitempty,flow"`
 	Alert         *Alert              `yaml:",omitempty"`
+	Draw          DrawMode            `yaml:"drawMode,omitempty"`
 	Visualization *GraphVisualization `yaml:",omitempty"`
 }
 
@@ -56,6 +57,15 @@ func (graphPanel DashboardGraph) toOption() (row.Option, error) {
 	if graphPanel.Axes != nil && graphPanel.Axes.Bottom != nil {
 		opts = append(opts, graph.XAxis(graphPanel.Axes.Bottom.toOptions()...))
 	}
+
+	if graphPanel.Draw.Lines {
+		opts = append(opts, graph.Draw(graph.Lines))
+	}
+
+	if graphPanel.Draw.Bars {
+		opts = append(opts, graph.Draw(graph.Bars))
+	}
+
 	if len(graphPanel.Legend) != 0 {
 		legendOpts, err := graphPanel.legend()
 		if err != nil {
@@ -86,6 +96,11 @@ func (graphPanel DashboardGraph) toOption() (row.Option, error) {
 	}
 
 	return row.WithGraph(graphPanel.Title, opts...), nil
+}
+
+type DrawMode struct {
+	Lines bool
+	Bars  bool
 }
 
 type GraphSeriesOverride struct {
