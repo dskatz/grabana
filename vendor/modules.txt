@@ -1,3 +1,30 @@
+# github.com/K-Phoen/grabana v0.19.1
+## explicit
+github.com/K-Phoen/grabana
+github.com/K-Phoen/grabana/alert
+github.com/K-Phoen/grabana/axis
+github.com/K-Phoen/grabana/cmd/cli/cmd
+github.com/K-Phoen/grabana/dashboard
+github.com/K-Phoen/grabana/decoder
+github.com/K-Phoen/grabana/graph
+github.com/K-Phoen/grabana/graph/series
+github.com/K-Phoen/grabana/heatmap
+github.com/K-Phoen/grabana/heatmap/axis
+github.com/K-Phoen/grabana/row
+github.com/K-Phoen/grabana/singlestat
+github.com/K-Phoen/grabana/table
+github.com/K-Phoen/grabana/target/graphite
+github.com/K-Phoen/grabana/target/influxdb
+github.com/K-Phoen/grabana/target/prometheus
+github.com/K-Phoen/grabana/target/stackdriver
+github.com/K-Phoen/grabana/text
+github.com/K-Phoen/grabana/timeseries
+github.com/K-Phoen/grabana/timeseries/axis
+github.com/K-Phoen/grabana/variable/constant
+github.com/K-Phoen/grabana/variable/custom
+github.com/K-Phoen/grabana/variable/datasource
+github.com/K-Phoen/grabana/variable/interval
+github.com/K-Phoen/grabana/variable/query
 # github.com/K-Phoen/sdk v0.0.0-20211119151408-adef1e5fdd11
 ## explicit
 github.com/K-Phoen/sdk
@@ -13,7 +40,6 @@ github.com/google/go-github/v30/github
 # github.com/google/go-querystring v1.0.0
 github.com/google/go-querystring/query
 # github.com/gosimple/slug v1.11.2
-## explicit
 github.com/gosimple/slug
 # github.com/gosimple/unidecode v1.0.1
 github.com/gosimple/unidecode

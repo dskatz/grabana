@@ -85,14 +85,6 @@ func WithBasicAuth(username string, password string) Option {
 	}
 }
 
-func WithOrgID(orgID int) Option {
-	return func(client *Client) {
-		client.requestModifiers = append(client.requestModifiers, func(request *http.Request) {
-			request.Header.Set("X-Grafana-Org-Id", fmt.Sprintf("%d", orgID))
-		})
-	}
-}
-
 func (client *Client) modifyRequest(request *http.Request) {
 	for _, modifier := range client.requestModifiers {
 		modifier(request)
